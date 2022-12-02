@@ -1,0 +1,17 @@
+{
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "rules": {
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "no-unused-vars": "off",
+        "@nrwl/nx/enforce-module-boundaries": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "unused-imports/no-unused-imports": "error"
+      }
+    }
+  ]
+}
