@@ -17,7 +17,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@s360-utils/jest-extends": [
+        "packages/jest-extends/src/index.ts"
+      ]
+    }
   },
   "exclude": [
     "node_modules",

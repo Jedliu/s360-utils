@@ -1,0 +1,46 @@
+{
+  "name": "jest-extends",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/jest-extends/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/jest-extends",
+        "main": "packages/jest-extends/src/index.ts",
+        "tsConfig": "packages/jest-extends/tsconfig.lib.json",
+        "assets": ["packages/jest-extends/*.md"]
+      }
+    },
+    "publish": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "node tools/scripts/publish.mjs jest-extends {args.ver} {args.tag}"
+      },
+      "dependsOn": [
+        {
+          "projects": "self",
+          "target": "build"
+        }
+      ]
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/jest-extends/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/jest-extends"],
+      "options": {
+        "jestConfig": "packages/jest-extends/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
