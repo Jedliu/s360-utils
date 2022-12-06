@@ -20,6 +20,9 @@
     "paths": {
       "@s360-utils/jest-extends": [
         "packages/jest-extends/src/index.ts"
+      ],
+      "@s360-utils/util-kits": [
+        "packages/util-kits/src/index.ts"
       ]
     }
   },

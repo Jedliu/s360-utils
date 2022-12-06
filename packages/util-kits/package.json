@@ -1,0 +1,7 @@
+{
+  "name": "@s360-utils/util-kits",
+  "version": "0.0.1",
+  "description": "Useful util kits",
+  "type": "commonjs",
+  "license": "MIT"
+}
