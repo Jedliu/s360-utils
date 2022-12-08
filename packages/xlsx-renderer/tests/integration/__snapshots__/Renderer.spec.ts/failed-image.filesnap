@@ -1,0 +1,28 @@
+expect(received).toEqual(expected) // deep equality
+
+- Expected  - 7
++ Received  + 7
+
+  Array [
+    Array [
+      Object {
+-       "brc": 9,
+-       "brcf": 118533,
+-       "brr": 9,
+-       "brrf": 161924,
++       "brc": 6,
++       "brcf": 491067,
++       "brr": 2,
++       "brrf": 762000,
+        "imageId": 0,
+-       "tlc": 5,
++       "tlc": 4,
+        "tlcf": 0,
+-       "tlr": 2,
+-       "tlrf": 809624,
++       "tlr": 1,
++       "tlrf": 0,
+      },
+    ],
+    Array [],
+  ]

@@ -1,0 +1,25 @@
+expect(received).toEqual(expected) // deep equality
+
+- Expected  - 2
++ Received  + 2
+
+@@ -1,17 +1,17 @@
+  Object {
+    "border": Object {},
+    "fill": Object {
+      "fgColor": Object {
+-       "argb": "FFFFEB9C",
++       "argb": "FFFFC7CE",
+      },
+      "pattern": "solid",
+      "type": "pattern",
+    },
+    "font": Object {
+      "color": Object {
+-       "argb": "FF9C5700",
++       "argb": "FF9C0006",
+      },
+      "family": 2,
+      "name": "Calibri",
+      "scheme": "minor",
+      "size": 11,

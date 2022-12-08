@@ -1,0 +1,4 @@
+expect(received).toEqual(expected) // deep equality
+
+Expected: 13
+Received: 7.90625

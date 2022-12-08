@@ -23,6 +23,9 @@
       ],
       "@s360-utils/util-kits": [
         "packages/util-kits/src/index.ts"
+      ],
+      "@s360-utils/xlsx-renderer": [
+        "packages/xlsx-renderer/src/index.ts"
       ]
     }
   },

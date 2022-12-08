@@ -1,0 +1,4 @@
+expect(received).toEqual(expected) // deep equality
+
+Expected: {"formula": "\"asdasda\"", "result": "asdasda"}
+Received: "asdasda"
