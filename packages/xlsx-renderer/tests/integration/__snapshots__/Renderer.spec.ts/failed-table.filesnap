@@ -1,0 +1,31 @@
+expect(received).toEqual(expected) // deep equality
+
+- Expected  - 2
++ Received  + 2
+
+@@ -2,11 +2,11 @@
+    "border": Object {
+      "bottom": Object {
+        "color": Object {
+          "indexed": 64,
+        },
+-       "style": "thin",
++       "style": "medium",
+      },
+      "left": Object {
+        "color": Object {
+          "indexed": 64,
+        },
+@@ -14,11 +14,11 @@
+      },
+      "right": Object {
+        "color": Object {
+          "indexed": 64,
+        },
+-       "style": "thin",
++       "style": "medium",
+      },
+      "top": Object {
+        "color": Object {
+          "indexed": 64,
+        },

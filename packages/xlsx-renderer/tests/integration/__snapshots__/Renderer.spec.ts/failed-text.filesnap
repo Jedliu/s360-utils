@@ -1,0 +1,4 @@
+expect(received).toEqual(expected) // deep equality
+
+Expected: "sadasd"
+Received: "sadas"

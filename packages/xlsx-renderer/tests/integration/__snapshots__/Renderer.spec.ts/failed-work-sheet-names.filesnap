@@ -1,0 +1,10 @@
+expect(received).toEqual(expected) // deep equality
+
+- Expected  - 1
++ Received  + 1
+
+  Array [
+    "Sheet1",
+-   "Sheet3",
++   "Sheet2",
+  ]
