@@ -9,3 +9,6 @@ Run `nx build xlsx-renderer` to build the library.
 ## Running unit tests
 
 Run `nx test xlsx-renderer` to execute the unit tests via [Jest](https://jestjs.io).
+
+## Thanks to following packages
+[XToolSet](https://github.com/Siemienik/XToolSet)
