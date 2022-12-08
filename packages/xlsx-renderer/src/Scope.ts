@@ -68,16 +68,12 @@ export class Scope {
     const ows = this.output.worksheets[this.outputCell.ws];
 
     if (tc.isMerged && tc.address === (tc.master && tc.master.address)) {
-      // TODO fix ts-ignore ( @see https://github.com/Siemienik/xlsx-renderer/issues/46 )
-
       let { top, bottom } = tws._merges[tc.master.address];
-      // TODO fix ts-ignore ( @see https://github.com/Siemienik/xlsx-renderer/issues/46 )
 
       const { left, right } = tws._merges[tc.master.address];
       const verticalShift = this.outputCell.r - top;
       top += verticalShift;
       bottom += verticalShift;
-      // TODO fix ts-ignore ( @see https://github.com/Siemienik/xlsx-renderer/issues/46 )
 
       const dr = new DocRange();
       dr.setTLBR(top, left, bottom, right);

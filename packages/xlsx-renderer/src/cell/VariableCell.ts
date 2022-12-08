@@ -25,13 +25,12 @@ export class VariableCell extends BaseCell {
       scope.vm
     );
     if (value === undefined && !scope.isFrozen()) {
-      // todo do it better (use logger or somethink like that)
-      // tslint:disable-next-line:no-console
-      console.warn(
-        `WARN: ${path} is undefined for output: ${JSON.stringify(
-          scope.outputCell
-        )} when template is:${JSON.stringify(scope.templateCell)}`
-      );
+      // todo do it better (use logger or something like that)
+      // console.warn(
+      //   `WARN: ${path} is undefined for output: ${JSON.stringify(
+      //     scope.outputCell
+      //   )} when template is:${JSON.stringify(scope.templateCell)}`
+      // );
     }
     scope.setCurrentOutputValue(value);
     scope.incrementCol();

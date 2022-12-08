@@ -69,9 +69,7 @@ function assertCells(expected: Workbook, result: Workbook, factor = 10) {
       // TODO add to exceljs isMaster (@see https://github.com/exceljs/exceljs/issues/1400)
       // TODO update exceljs index.d.ts about cell.s (it misses cellvalues classes def) (@see https://github.com/Siemienik/xlsx-renderer/issues/44)
       if (!cell.r.isMerged || cell.r.address == cell.r.master.address) {
-        // TODO after exceljs fix (@see https://github.com/Siemienik/xlsx-renderer/issues/47)
         if (!cell.e.isMerged || cell.e.address == cell.e.master.address) {
-          // TODO after exceljs fix (@see https://github.com/Siemienik/xlsx-renderer/issues/47)
           expect(cell.r.text).toEqual(cell.e.text);
         }
       }

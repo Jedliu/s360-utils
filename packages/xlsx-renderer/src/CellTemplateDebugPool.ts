@@ -10,7 +10,8 @@ export class CellTemplateDebugPool extends CellTemplatePool {
   public override match(cell: Cell): BaseCell {
     const result = super.match(cell);
 
-    console.log(cell?.fullAddress, result, cell?.value);
+    // todo do it better (use logger or something like that)
+    // console.log(cell?.fullAddress, result, cell?.value);
 
     return result;
   }

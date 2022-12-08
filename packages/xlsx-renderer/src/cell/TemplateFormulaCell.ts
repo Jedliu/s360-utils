@@ -36,12 +36,11 @@ export class TemplateFormulaCell extends BaseCell {
       );
       if (value === undefined && !scope.isFrozen()) {
         // todo do it better (use logger or something like that)
-        // tslint:disable-next-line:no-console
-        console.warn(
-          `WARN: ${path} is undefined for template formula output: ${JSON.stringify(
-            scope.outputCell
-          )} when template is:${JSON.stringify(scope.templateCell)}`
-        );
+        // console.warn(
+        //   `WARN: ${path} is undefined for template formula output: ${JSON.stringify(
+        //     scope.outputCell
+        //   )} when template is:${JSON.stringify(scope.templateCell)}`
+        // );
       }
 
       return value;
