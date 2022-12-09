@@ -1,0 +1,8 @@
+{
+  "name": "@s360-utils/xlsx-importer",
+  "version": "0.0.1",
+  "type": "commonjs",
+  "dependencies": {
+    "@s360-utils/exceljs": "^4.3.1"
+  }
+}

@@ -10,27 +10,16 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": [
-      "es2017",
-      "dom"
-    ],
+    "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@s360-utils/jest-extends": [
-        "packages/jest-extends/src/index.ts"
-      ],
-      "@s360-utils/util-kits": [
-        "packages/util-kits/src/index.ts"
-      ],
-      "@s360-utils/xlsx-renderer": [
-        "packages/xlsx-renderer/src/index.ts"
-      ]
+      "@s360-utils/jest-extends": ["packages/jest-extends/src/index.ts"],
+      "@s360-utils/util-kits": ["packages/util-kits/src/index.ts"],
+      "@s360-utils/xlsx-importer": ["packages/xlsx-importer/src/index.ts"],
+      "@s360-utils/xlsx-renderer": ["packages/xlsx-renderer/src/index.ts"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }

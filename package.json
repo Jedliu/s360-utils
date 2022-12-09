@@ -5,6 +5,7 @@
   "scripts": {},
   "private": true,
   "dependencies": {
+    "@s360-utils/exceljs": "^4.3.1",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
