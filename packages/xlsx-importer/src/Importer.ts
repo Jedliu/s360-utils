@@ -13,6 +13,8 @@ export class Importer implements IImporter {
     const type = (config.type as ImportType) || IMPORT_TYPE_DEFAULT;
     const ws = this.wb.getWorksheet(worksheet ?? 1);
 
+    if (!ws) throw new Error(`Worksheet '${worksheet}' not found`);
+
     return getStrategyByType(type)(config, ws);
   }
 
