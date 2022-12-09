@@ -1,6 +1,7 @@
 export enum ImportType {
   // listVerticalStrategy
   List = 'list',
+  ListHeader = 'list-header',
   Vertical = 'vertical',
   ListVertical = 'list-vertical',
 

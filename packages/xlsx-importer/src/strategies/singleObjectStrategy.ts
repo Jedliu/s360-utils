@@ -16,7 +16,9 @@ export const singleObjectStrategy: ImportStrategy = <T>(
   objectCfg.fields.forEach((fieldCfg) => {
     const mapper = fieldCfg.mapper || MAPPER_DEFAULT;
     singleton[fieldCfg.key] = mapper(
-      ws.getCell(fieldCfg.row, fieldCfg.col).text
+      typeof fieldCfg.col == 'number'
+        ? ws.getCell(fieldCfg.row, fieldCfg.col).text
+        : ws.getCell(fieldCfg.col + '' + fieldCfg.row).text
     );
   });
 

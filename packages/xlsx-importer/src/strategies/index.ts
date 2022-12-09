@@ -1,6 +1,7 @@
 import { ImportType } from '../config/ImportType';
 import { ImportStrategy } from './ImportStrategy';
 import { invalidTypeStrategy } from './invalidTypeStrategy';
+import { listHeaderVerticalStrategy } from './listHeaderVerticalStrategy';
 import { listVerticalStrategy } from './listVerticalStrategy';
 import { singleObjectStrategy } from './singleObjectStrategy';
 
@@ -17,6 +18,9 @@ strategies[ImportType.Vertical] = strategies[ImportType.List];
 strategies[ImportType.Object] = singleObjectStrategy;
 strategies[ImportType.Single] = strategies[ImportType.Object];
 strategies[ImportType.Singleton] = strategies[ImportType.Object];
+
+/** @see listHeaderVerticalStrategy */
+strategies[ImportType.ListHeader] = listHeaderVerticalStrategy;
 
 export const getStrategyByType = (type: ImportType): ImportStrategy =>
   strategies[type] || invalidTypeStrategy;

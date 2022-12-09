@@ -11,8 +11,14 @@ export const listVerticalStrategy: ImportStrategy = <T>(
 ): T[] => {
   const listCfg = cfg as IListSourceConfig;
   const result: T[] = [];
-  ws.eachRow((row: any, i: number) => {
+  let count = 0;
+  ws.eachRow((row, i) => {
     if (i <= listCfg.rowOffset) {
+      return;
+    }
+
+    count++;
+    if (listCfg.rowCount && count > listCfg.rowCount) {
       return;
     }
 
@@ -25,5 +31,5 @@ export const listVerticalStrategy: ImportStrategy = <T>(
 
     result.push(item as T);
   });
-  return result;
+  return result as T[];
 };
