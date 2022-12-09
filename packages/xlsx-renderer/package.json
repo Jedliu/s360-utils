@@ -4,6 +4,7 @@
   "type": "commonjs",
   "dependencies": {
     "@s360-utils/exceljs": "^4.3.1",
-    "@s360-utils/jest-extends": "^0.0.1"
+    "@s360-utils/jest-extends": "^0.0.1",
+    "@s360-utils/util-kits": "^0.0.1"
   }
 }
