@@ -2,14 +2,7 @@ import path = require('path');
 
 import { ImportType } from '../../src/config/ImportType';
 import { ImporterFactory } from '../../src/ImporterFactory';
-
-//TODO to extract this function
-const getDateString = (time: number): string => {
-  let nd = new Date(time);
-  const offset = nd.getTimezoneOffset();
-  nd = new Date(nd.getTime() - offset * 60 * 1000);
-  return nd.toISOString().split('T')[0];
-};
+import { getDateString } from '../utils';
 
 const config = {
   user: {
@@ -30,7 +23,7 @@ const config = {
         row: 8,
         col: 'B',
         key: 'birthday',
-        mapper: (value: any) => getDateString(new Date(value).getTime()),
+        mapper: (value: any) => getDateString(new Date(value)),
       },
     ],
   },

@@ -1,13 +1,7 @@
 import { dateMapper } from '../../../src/mappers';
+import { getDateString } from '../../utils';
 
 describe('UNIT TEST: src/mappers/', () => {
-  const getDateString = (time: number): string => {
-    let nd = new Date(time);
-    const offset = nd.getTimezoneOffset();
-    nd = new Date(nd.getTime() - offset * 60 * 1000);
-    return nd.toISOString().split('T')[0];
-  };
-
   const isString = (str: any): boolean => {
     return str != null && typeof str.valueOf() === 'string';
   };
@@ -41,11 +35,9 @@ describe('UNIT TEST: src/mappers/', () => {
       it(`dateMapper for input "${inValue}" SHOULD return "${expectedResult}"`, () => {
         const time = dateMapper(inValue as string).getTime();
         if (isString(expectedResult)) {
-          expect(getDateString(time)).toEqual(expectedResult);
+          expect(getDateString(new Date(time))).toEqual(expectedResult);
         } else {
-          expect(dateMapper(inValue as string).getTime()).toEqual(
-            expectedResult
-          );
+          expect(time).toEqual(expectedResult);
         }
       });
     });
