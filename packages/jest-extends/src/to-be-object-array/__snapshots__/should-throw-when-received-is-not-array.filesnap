@@ -1,0 +1,3 @@
+expect(received).toBeObjectArray(expected)
+
++ Received: value must be an object array.

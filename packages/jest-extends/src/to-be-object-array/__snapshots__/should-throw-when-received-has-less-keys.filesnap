@@ -1,0 +1,12 @@
+expect(received).toBeObjectArray(expected)
+
+- Expected -
++ Received +
+
+- Object {
+-   "key": Any<String>,
+-   "someOtherKey": Any<String>,
+- }
++  Object {
++   "key": "value2"
++ }
