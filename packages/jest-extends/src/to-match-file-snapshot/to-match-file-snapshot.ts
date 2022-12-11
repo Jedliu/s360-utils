@@ -12,10 +12,18 @@ export {};
 declare global {
   namespace jest {
     interface Matchers<R> {
-      toMatchFileSnapshot(snapFilePath?: string, addNameIndex?: boolean): R;
+      toMatchFileSnapshot(
+        snapFilePath?: string,
+        eachFolderPerTest?: boolean,
+        addNameIndex?: boolean
+      ): R;
     }
     interface Expect {
-      toMatchFileSnapshot(snapFilePath?: string, addNameIndex?: boolean): any;
+      toMatchFileSnapshot(
+        snapFilePath?: string,
+        eachFolderPerTest?: boolean,
+        addNameIndex?: boolean
+      ): any;
     }
   }
 }
@@ -24,6 +32,7 @@ expect.extend({
   toMatchFileSnapshot(
     content: string | Buffer,
     snapFilePath?: string,
+    eachFolderPerTest = true,
     addNameIndex = false
   ) {
     const { isNot, snapshotState, currentTestName, assertionCalls, testPath } =
@@ -52,7 +61,7 @@ expect.extend({
     const filePath = path.join(
       path.dirname(testPath),
       '__snapshots__',
-      path.basename(testPath),
+      eachFolderPerTest ? path.basename(testPath) : '',
       subPath
     );
     const actualFileName = path.basename(filePath);
